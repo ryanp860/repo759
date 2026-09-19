@@ -1,58 +1,109 @@
-#2A cd somedir
-#2B cat sometext.txt
-#2C tail -n 5 sometext.txt
-#2D tail -n 5 *.txt
-#2E for i in {0..6}; do echo "$i"; done\
+## ECE 759 — Assignment 1
 
-#3A No modules loaded
-#3B gcc (GCC) 14.3.1 20251022 (Red Hat 14.3.1-4)
-#3C nvidia/cuda/10.2.2    nvidia/cuda/11.6.0    nvidia/cuda/12.1.0    nvidia/cuda/12.9.1                   nvidia/nvhpc-hpcx-cuda12/23.11
-   nvidia/cuda/11.0.3    nvidia/cuda/11.8.0    nvidia/cuda/12.2.0    nvidia/cuda/13.0.0            (D)    nvidia/nvhpc-hpcx-cuda12/24.5  (D)
-   nvidia/cuda/11.3.1    nvidia/cuda/12.0.0    nvidia/cuda/12.5.0    nvidia/nvhpc-hpcx-cuda11/24.5
+**GitHub repository:** [https://github.com/ryanp860/repo759/HW01](https://github.com/ryanp860/repo759/HW01)
 
-abaqus/2023                                     intel-noopt/dpl/2022.3                        nvidia/cuda/11.6.0
-   blaze/3.8                                       intel-noopt/dpl/2022.8                        nvidia/cuda/11.8.0
-   blender/4.0.2                                   intel-noopt/ifort/latest                      nvidia/cuda/12.0.0
-   boost/1.85.0                                    intel-noopt/ifort/2024.0.0                    nvidia/cuda/12.1.0
-   cmake/4.1.0                                     intel-noopt/inspector/latest                  nvidia/cuda/12.2.0
-   conda/miniforge/23.1.0                          intel-noopt/inspector/2024.0                  nvidia/cuda/12.5.0
-   conda/miniforge/24.3.0                   (D)    intel-noopt/intel_ipp_intel64/latest          nvidia/cuda/12.9.1
-   gcc/12.2.0                                      intel-noopt/intel_ipp_intel64/2021.10         nvidia/cuda/13.0.0                     (D)
-   gcc/13.2.0                                      intel-noopt/intel_ipp_intel64/2022.1          nvidia/licensing/hpc-sdk
-   gcc/14.3.0                                      intel-noopt/intel_ippcp_intel64/latest        nvidia/licensing/sdk-samples-and-tools (D)
-   gromacs/gnu15-ompi5.0.8-cu13.0/2025.4           intel-noopt/intel_ippcp_intel64/2021.9        nvidia/nvhpc-byo-compiler/21.5
-   gromacs/gnu15-ompi5.0.8-nogpu/2025.4     (D)    intel-noopt/intel_ippcp_intel64/2025.1        nvidia/nvhpc-byo-compiler/22.3
-   intel-noopt/dev-utilities/latest                intel-noopt/ishmem/latest                     nvidia/nvhpc-byo-compiler/22.9
-   intel-noopt/dev-utilities/2024.0.0              intel-noopt/ishmem/1.3.0                      nvidia/nvhpc-byo-compiler/23.7
-   intel-noopt/dev-utilities/2025.1.0              intel-noopt/itac/latest                       nvidia/nvhpc-byo-compiler/23.11
-   intel-noopt/advisor/latest                      intel-noopt/itac/2022.0                       nvidia/nvhpc-byo-compiler/24.5         (D)
-   intel-noopt/advisor/2024.0                      intel-noopt/mkl/latest                        nvidia/nvhpc-hpcx-cuda11/24.5
-   intel-noopt/advisor/2025.1                      intel-noopt/mkl/2024.0                        nvidia/nvhpc-hpcx-cuda12/23.11
-   intel-noopt/ccl/latest                          intel-noopt/mkl/2025.1                        nvidia/nvhpc-hpcx-cuda12/24.5          (D)
-   intel-noopt/ccl/2021.11.0                       intel-noopt/oclfpga/latest                    nvidia/nvhpc-hpcx/23.11
-   intel-noopt/ccl/2021.15.2                       intel-noopt/oclfpga/2023.2.1                  nvidia/nvhpc-hpcx/24.5                 (D)
-   intel-noopt/compiler-intel-llvm/latest          intel-noopt/oclfpga/2024.0.0                  nvidia/nvhpc-nompi/21.5
-   intel-noopt/compiler-intel-llvm/2025.1.1        intel-noopt/tbb/latest                        nvidia/nvhpc-nompi/22.3
-   intel-noopt/compiler-rt/latest                  intel-noopt/tbb/2021.11                       nvidia/nvhpc-nompi/22.9
-   intel-noopt/compiler-rt/2024.0.0                intel-noopt/tbb/2022.1                        nvidia/nvhpc-nompi/23.7
-   intel-noopt/compiler-rt/2025.1.1                intel-noopt/umf/latest                        nvidia/nvhpc-nompi/23.11
-   intel-noopt/compiler/latest                     intel-noopt/umf/0.10.0                        nvidia/nvhpc-nompi/24.5                (D)
-   intel-noopt/compiler/2024.0.0                   intel-noopt/vtune/latest                      nvidia/nvhpc-openmpi3/23.11
-   intel-noopt/compiler/2025.1.1                   intel-noopt/vtune/2024.0                      nvidia/nvhpc-openmpi3/24.5             (D)
-   intel-noopt/dal/latest                          intel-noopt/vtune/2025.3               (D)    nvidia/nvhpc/21.5
-   intel-noopt/dal/2024.0.0                        lammps/generic/2023.08.02u1                   nvidia/nvhpc/22.3
-   intel-noopt/dal/2025.5                          lammps/gnu15-impi2021.14/2025.07.22u2         nvidia/nvhpc/22.9
-   intel-noopt/debugger/latest                     lammps/gnu15-mpich3.4.3/2025.07.22u2          nvidia/nvhpc/23.7
-   intel-noopt/debugger/2024.0.0                   lammps/gnu15-openmpi5.0.8/2025.07.22u2 (D)    nvidia/nvhpc/23.11
-   intel-noopt/debugger/2025.1.1                   libaec/1.1.4                                  nvidia/nvhpc/24.5                      (D)
-   intel-noopt/dnnl/latest                         mamba/23.1.0                                  starccm+/17.04.008-R8
-   intel-noopt/dnnl/3.3.0                          matlab/container                              starccm+/18.02.010-R8
-   intel-noopt/dnnl/3.7.3                          matlab/r2021a                                 starccm+/18.04.009-R8
-   intel-noopt/dpct/latest                         matlab/r2021b                                 starccm+/18.06.006-R8
-   intel-noopt/dpct/2022.0.0                       matlab/r2023a                          (D)    starccm+/19.04.007-R8                  (D)
-   intel-noopt/dpct/2024.0.0                       nvidia/cuda/10.2.2                            szip/libaec/1.1.4
-   intel-noopt/dpct/2025.1.0                       nvidia/cuda/11.0.3
-   intel-noopt/dpl/latest                          nvidia/cuda/11.3.1
+---
 
+### Task 2 — Linux Command Line
 
-#3D Cmake, this module loads the cmake utility
+#### 2(a) Change to a subdirectory named `somedir`
+
+```bash
+cd somedir
+```
+
+#### 2(b) Print the contents of `sometext.txt`
+
+```bash
+cat sometext.txt
+```
+
+#### 2(c) Print the last five lines of `sometext.txt`
+
+```bash
+tail -n 5 sometext.txt
+```
+
+#### 2(d) Print the last five lines of every `.txt` file in the current directory
+
+```bash
+tail -n 5 *.txt
+```
+
+#### 2(e) Print each integer from 0 through 6 using a `for` loop
+
+```bash
+for i in {0..6}; do echo "$i" done
+```
+
+--- 
+
+### Task 3 — Euler Modules
+
+#### 3(a) Are any modules loaded when you first log in to Euler?
+
+No modules loaded.
+
+#### 3(b) What version of GCC is available without loading any modules?
+
+```text
+gcc (GCC) 14.3.1 20251022 (Red Hat 14.3.1-4)
+```
+
+#### 3(c) List all CUDA modules available on Euler
+
+```text
+nvidia/cuda/10.2.2
+nvidia/cuda/11.0.3
+nvidia/cuda/11.3.1
+nvidia/cuda/11.6.0
+nvidia/cuda/11.8.0
+nvidia/cuda/12.0.0
+nvidia/cuda/12.1.0
+nvidia/cuda/12.2.0
+nvidia/cuda/12.5.0
+nvidia/cuda/12.9.1
+nvidia/cuda/13.0.0 (default)
+nvidia/nvhpc-hpcx-cuda11/24.5
+nvidia/nvhpc-hpcx-cuda12/23.11
+nvidia/nvhpc-hpcx-cuda12/24.5 (default)
+```
+
+#### 3(d) Name one other software module and briefly explain its purpose
+
+**CMake** is a cross-platform build-system generator used to configure and
+organize the compilation of software projects.
+
+---
+
+### Task 5 — Slurm Tools
+
+#### 5(a) In what directory does a Slurm job on Euler begin execution?
+
+A Slurm job starts in the directory from which `sbatch` was run unless a
+different working directory is specified.
+
+#### 5(b) What is `SLURM_JOB_ID`?
+
+`SLURM_JOB_ID` is an environment variable containing the unique ID assigned to
+the running Slurm job.
+
+#### 5(c) How can you track your pending and running jobs?
+
+Run the following command:
+
+```bash
+squeue -u "$USER"
+```
+
+#### 5(d) How can you cancel one of your queued jobs?
+
+Run `scancel JOB_ID`, replacing `JOB_ID` with the job's ID number.
+
+#### 5(e) What does `#SBATCH --gres=gpu:1` specify?
+
+It tells Slurm that the job requires one GPU.
+
+#### 5(f) Optional: What does `#SBATCH --array=0-9` specify?
+
+It creates a job array containing ten tasks, with indices 0 through 9.
