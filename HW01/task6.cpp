@@ -3,7 +3,11 @@
 #include <iostream>
 
 int main(int argc, char* argv[]) {
-    (void)argc;
+    if (argc < 2) {
+        std::cerr << "Usage: " << argv[0] << " N\n";
+        return 1;
+    }
+
     const int n = std::atoi(argv[1]);
 
     for (int i = 0; i <= n; ++i) {
